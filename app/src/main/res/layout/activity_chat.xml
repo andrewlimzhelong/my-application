@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Chat.ChatActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topBar"
+        android:background="#ffffff">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#25ABB7"
+            android:id="@+id/relLayout1">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/zwhiteoutlineleftarrow"
+                android:id="@+id/backArrow"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"/>
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_profile"
+                android:layout_toRightOf="@+id/backArrow"
+                android:id="@+id/userChatProfilePic"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/userChatProfilePic"
+                android:textColor="#FFFFFF"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:textSize="18dp"
+                android:maxLength="24"
+                android:id="@+id/chatUsernameOfUser"
+                android:text="Username Of User"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/relLayout2"
+            android:orientation="vertical"
+            android:background="#F5F5F5"
+            android:layout_below="@+id/relLayout1"
+            android:paddingBottom="50dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@drawable/shadow"
+                android:layout_below="@+id/relLayout1"/>
+    
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/messageList" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/bottom_shadow"
+            android:layout_above="@+id/sendLayout"/>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/sendLayout"
+        android:background="#25ABB7">
+
+        <EditText
+            android:layout_weight="0.7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/messageBoxInput"
+            android:textColorHint="@color/colorWhite"
+            android:layout_marginBottom="5dp"
+            android:textSize="15dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorWhite"
+            android:backgroundTint="@color/colorWhite"
+            android:hint="Message..."
+            android:layout_marginLeft="5dp"/>
+
+        <Button
+            android:layout_weight="0.20"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/send"
+            android:textSize="14dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/button_circle"
+            android:layout_marginRight="5dp"
+            android:textAllCaps="false"
+            android:text="Send"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+</RelativeLayout>

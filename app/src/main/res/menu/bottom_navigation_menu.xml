@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+    <item
+        android:id="@+id/ic_house"
+        android:icon="@drawable/whitehouseicon"
+        android:title="">
+    </item>
+    -->
+
+    <item
+        android:id="@+id/ic_house"
+        android:icon="@drawable/homeblackoutline"
+        android:title="">
+    </item>
+
+    <item
+        android:id="@+id/ic_message"
+        android:icon="@drawable/commentwhiteovalbubbleblackoutline"
+        android:title="">
+    </item>
+
+    <item
+        android:id="@+id/ic_add"
+        android:title="">
+    </item>
+
+    <item
+        android:id="@+id/ic_people"
+        android:icon="@drawable/blackoutlineheart"
+        android:title="">
+    </item>
+
+    <item
+        android:id="@+id/ic_profile"
+        android:icon="@drawable/blackoutlinenoneckprofile"
+        android:title="">
+    </item>
+
+
+
+
+</menu>

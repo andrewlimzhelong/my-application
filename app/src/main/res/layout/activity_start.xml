@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartActivity"
+    android:background="@color/colorWhite">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/whiteoutlineheart"
+        android:backgroundTint="@color/black" />
+
+    <EditText
+        android:id="@+id/reg_email"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:hint="Username"
+        android:textSize="15dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/black"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/reg_confirm_pass"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/reg_email"
+        android:hint="Password"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/black"
+        android:textSize="15dp"
+        android:textColorHint="#9B9FA5"
+        android:textColor="@color/black"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="230dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/reg_confirm_pass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_circle"
+        android:text="Log In"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="14dp" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_btn"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/midPoint"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/facebookBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/login_btn"
+        android:layout_alignEnd="@+id/login_btn"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/zfacebook"
+        android:fontFamily="Lucida Grande"
+        android:textColor="@color/colorWhite"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_below="@+id/login_btn"
+        android:layout_alignStart="@+id/login_btn"
+        android:layout_marginTop="7.5dp"
+        android:layout_toLeftOf="@+id/midPoint" />
+
+    <TextView
+        android:id="@+id/loginPageText"
+        android:layout_width="wrap_content"
+        android:layout_height="20.5dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="15dp"
+        android:layout_below="@+id/sign_in_button"
+        android:layout_marginTop="10dp"
+        android:text="Sign Up"
+        android:textColor="#00BCD4" />
+
+</RelativeLayout>

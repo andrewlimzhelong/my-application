@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <!-- YOUTUBE TUTORIAL -->
+    <!-- bottom bar -->
+    <!-- https://www.youtube.com/watch?v=f4kpysbsIeI&list=PLgCYzUzKIBE9XqkckEJJA0I1wVKbUAOdv&index=2
+    -->
+
+    <!--buttons animation -->
+    <!-- https://www.youtube.com/watch?v=_vxCKMankOM&list=PLgCYzUzKIBE9XqkckEJJA0I1wVKbUAOdv&index=4
+    -->
+
+    <RelativeLayout
+        android:id="@+id/postedServicesPage"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/recyclerview_border">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_above="@+id/bottomBar"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:id="@+id/bottomBar"
+        android:layout_alignParentBottom="true">
+
+        <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/bottomNavViewBar"
+            app:menu="@menu/bottom_navigation_menu"
+            android:background="@drawable/bottom_navigation_background_design">
+        </com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx>
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+</merge>
+
+

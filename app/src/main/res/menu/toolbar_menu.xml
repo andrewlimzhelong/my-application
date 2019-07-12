@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--
+    Youtube link for the top search bar and how its done.
+    https://www.youtube.com/watch?v=qzbvDJqXeJs
+    -->
+
+    <item
+        android:title="Search"
+        android:id="@+id/action_search"
+        android:icon="@drawable/whiteoutlinemagnifyingglass"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="android.support.v7.widget.SearchView" />
+
+</menu>

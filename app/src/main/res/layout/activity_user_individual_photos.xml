@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ServiceSelected">
+
+    <!-- Top Bar of Layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayout1">
+
+            <include layout="@layout/toolbar_layout"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_below="@+id/relLayout1">
+
+            <!-- Middle Section of Layout -->
+
+            <ScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/homeScreenToolBar">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/postImageDisplayView"
+                        android:layout_width="match_parent"
+                        android:layout_height="480dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@drawable/aaddphoto" />
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginBottom="10dp"
+                        app:cardCornerRadius="10dp"
+                        android:id="@+id/cardView1"
+                        android:layout_below="@+id/postImageDisplayView">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/textDetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Details"
+                                android:background="#FFFF"
+                                android:paddingLeft="10dp"/>
+
+                            <TextView
+                                android:id="@+id/serviceDescription"
+                                android:layout_width="match_parent"
+                                android:layout_below="@+id/textDetails"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:paddingLeft="10dp"/>
+
+                            <TextView
+                                android:id="@+id/dollars"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/serviceDescription"
+                                android:paddingLeft="10dp"
+                                android:text="$ "
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/pricingAmt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/serviceDescription"
+                                android:layout_toRightOf="@+id/dollars"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/dot"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/serviceDescription"
+                                android:layout_toRightOf="@+id/pricingAmt"
+                                android:text="."
+                                android:textColor="@color/black"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/decimal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/serviceDescription"
+                                android:layout_toRightOf="@+id/dot"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/textMinOrder"
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:paddingLeft="10dp"
+                                android:text="Category : Nil"
+                                android:layout_below="@+id/pricingAmt"
+                                android:textColor="#000" />
+
+
+                            <TextView
+                                android:id="@+id/textDetails2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Etc..."
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:layout_below="@+id/textMinOrder"
+                                android:paddingLeft="10dp"/>
+
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cardView3"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_below="@+id/cardView2">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/textFive"
+                                android:layout_width="match_parent"
+                                android:layout_height="18dp"
+                                android:background="#FFFF"
+                                android:text="Company Details"
+                                android:paddingLeft="10dp"/>
+
+                            <TextView
+                                android:id="@+id/companyHeaderTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Company : "
+                                android:layout_below="@+id/textFive"
+                                android:textColor="#000"
+                                android:textStyle="bold"
+                                android:textSize="20dp"
+                                android:paddingLeft="10dp"/>
+
+                            <TextView
+                                android:id="@+id/yourCompany"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textFive"
+                                android:layout_toRightOf="@+id/companyHeaderTV"
+                                android:textColor="#000"
+                                android:textStyle="bold"
+                                android:textSize="20dp"
+                                android:paddingLeft="10dp"/>
+
+                            <TextView
+                                android:id="@+id/yourCompanyDesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:layout_below="@+id/yourCompany"
+                                android:textColor="#000"
+                                android:textStyle="bold"
+                                android:textSize="20dp"
+                                android:paddingLeft="10dp"/>
+
+
+                            <TextView
+                                android:id="@+id/textContactDet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Supplier Profile"
+                                android:layout_below="@+id/yourCompanyDesc"
+                                android:layout_marginTop="5dp"
+                                android:paddingLeft="10dp"/>
+
+                            <ImageView
+                                android:id="@+id/imageSmallFlag"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_below="@id/textContactDet"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp"/>
+
+                            <TextView
+                                android:id="@+id/textUsername"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="USERNAME"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:layout_below="@id/textContactDet"
+                                android:layout_toRightOf="@id/imageSmallFlag"
+                                android:paddingRight="15dp"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginLeft="5dp"/>
+
+                            <TextView
+                                android:id="@+id/Handphonetv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Handphone Number : "
+                                android:textColor="@color/black"
+                                android:layout_below="@id/imageSmallFlag"
+                                android:layout_marginTop="5dp"
+                                android:paddingLeft="10dp"
+                                android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/OfficenumberTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Office Number : "
+                                android:paddingLeft="10dp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:layout_below="@+id/Handphonetv"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_toRightOf="@+id/Handphonetv"
+                                android:layout_below="@+id/imageSmallFlag"
+                                android:layout_marginTop="5dp">
+
+                                <TextView
+                                    android:id="@+id/textContactDes"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="User Handphone Number"
+                                    android:layout_below="@id/textContactDet"
+                                    android:paddingLeft="10dp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:layout_toRightOf="@+id/Handphonetv"/>
+
+                                <TextView
+                                    android:id="@+id/Officenumber"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Nil"
+                                    android:layout_below="@id/textContactDes"
+                                    android:paddingLeft="10dp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:layout_toRightOf="@+id/OfficenumberTV" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cardView5"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_below="@+id/cardView3">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/locationTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="18dp"
+                                android:background="#FFFF"
+                                android:text="Location"
+                                android:paddingLeft="10dp"/>
+
+                            <TextView
+                                android:id="@+id/countryHeader"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Country : "
+                                android:layout_below="@+id/locationTV"
+                                android:textColor="#000"
+                                android:textStyle="bold"
+                                android:paddingLeft="10dp"/>
+
+                            <TextView
+                                android:id="@+id/stateHeader"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="State / City : "
+                                android:layout_below="@+id/countryLocation"
+                                android:textColor="#000"
+                                android:textStyle="bold"
+                                android:paddingLeft="10dp"/>
+
+                            <TextView
+                                android:id="@+id/countryLocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:layout_toRightOf="@+id/stateHeader"
+                                android:layout_below="@+id/locationTV"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:paddingLeft="10dp"/>
+
+                            <TextView
+                                android:id="@+id/stateLocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:layout_toRightOf="@+id/stateHeader"
+                                android:layout_below="@+id/countryLocation"
+                                android:textColor="#000"
+                                android:textStyle="bold"
+                                android:paddingLeft="10dp"/>
+
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <Button
+                        android:id="@+id/messageBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="2dp"
+                        android:text="Chat"
+                        android:background="@drawable/button_circle"
+                        android:textColor="@color/colorWhite" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
